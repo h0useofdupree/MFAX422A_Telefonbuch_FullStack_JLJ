@@ -1,0 +1,55 @@
+<?php
+$servername = "localhost";
+<<<<<<< HEAD
+$username = "root";
+$password = "";
+$dbname = "telefonbuch";
+=======
+$username = "root"; 
+$password = ""; 
+$dbname = "telefonbuch"; 
+>>>>>>> Add-current-state
+
+// Verbindung herstellen
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Überprüfen der Verbindung
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+// Suchparameter aus dem Formular sammeln
+<<<<<<< HEAD
+$nachname = $_GET['last_name'];
+$rufnummer = $_GET['phone_number'];
+
+// SQL-Abfrage zusammenstellen (zum Beispiel)
+$sql = "SELECT * FROM providers WHERE last_name LIKE '%$nachname%' AND phone_number LIKE '%$rufnummer%'";
+=======
+$nachname = $_GET['nachname'];
+$rufnummer = $_GET['rufnummer'];
+
+// SQL-Abfrage zusammenstellen (zum Beispiel)
+$sql = "SELECT * FROM providers WHERE nachname LIKE '%$nachname%' AND rufnummer LIKE '%$rufnummer%'";
+>>>>>>> Add-current-state
+$result = $conn->query($sql);
+
+// Ergebnisse ausgeben
+if ($result->num_rows > 0) {
+<<<<<<< HEAD
+  while ($row = $result->fetch_assoc()) {
+    echo "<p>Rufnummer: " . $row["phone_number"] . " - Name: " . $row["first_name"] . "</p>";
+=======
+  while($row = $result->fetch_assoc()) {
+    echo "<p>Rufnummer: " . $row["rufnummer"] . " - Name: " . $row["name"] . "</p>";
+>>>>>>> Add-current-state
+    // Hier weitere Daten nach Bedarf ausgeben
+  }
+} else {
+  echo "Keine Daten gefunden";
+}
+$conn->close();
+<<<<<<< HEAD
+=======
+?>
+>>>>>>> Add-current-state
