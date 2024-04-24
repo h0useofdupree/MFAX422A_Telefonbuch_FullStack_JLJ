@@ -20,7 +20,7 @@
         <th>Ort</th>
         <th>Status</th>
       </tr>
-      <?php include 'provider_data.php'; ?>
+      <?php include 'providers.php'; ?>
     </table>
   </div>
 </body>

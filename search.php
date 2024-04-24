@@ -17,7 +17,7 @@ $nachname = $_GET['nachname'];
 $rufnummer = $_GET['rufnummer'];
 
 // SQL-Abfrage zusammenstellen (zum Beispiel)
-$sql = "SELECT * FROM provider_data WHERE nachname LIKE '%$nachname%' AND rufnummer LIKE '%$rufnummer%'";
+$sql = "SELECT * FROM providers WHERE nachname LIKE '%$nachname%' AND rufnummer LIKE '%$rufnummer%'";
 $result = $conn->query($sql);
 
 // Ergebnisse ausgeben

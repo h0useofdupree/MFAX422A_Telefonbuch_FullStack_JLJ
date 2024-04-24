@@ -9,6 +9,25 @@
 <body>
   <div class="perspective provider">
     <h2>Datenpflege</h2>
+    <form action="insert_data.php" method="POST">
+      <label for="rufnummer">Rufnummer:</label>
+      <input type="text" id="rufnummer" name="rufnummer" required>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="nachname">Nachname:</label>
+      <input type="text" id="nachname" name="nachname" required>
+      <label for="anschrift">Anschrift:</label>
+      <input type="text" id="anschrift" name="anschrift" required>
+      <label for="hausnummer">Hausnummer:</label>
+      <input type="text" id="hausnummer" name="hausnummer" required>
+      <label for="plz">PLZ:</label>
+      <input type="text" id="plz" name="plz" required>
+      <label for="ort">Ort:</label>
+      <input type="text" id="ort" name="ort" required>
+      <label for="status">Status:</label>
+      <input type="text" id="status" name="status" required>
+      <button type="submit">Daten einfügen</button>
+    </form>
   </div>
 </body>
 </html>
