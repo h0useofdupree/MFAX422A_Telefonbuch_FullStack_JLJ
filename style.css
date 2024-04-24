@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .perspective {
+    margin-bottom: 20px;
+  }
+  
+  .provider h2,
+  .user h2 {
+    margin-bottom: 10px;
+  }
+  
+  .provider ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .provider li {
+    margin-bottom: 5px;
+  }
+  
+  .user form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+  }
+  
+  .user label {
+    margin-bottom: 5px;
+  }
+  
+  .user input[type="text"] {
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .user button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .user button:hover {
+    background-color: #0056b3;
+  }
+  

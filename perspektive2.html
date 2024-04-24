@@ -1,0 +1,23 @@
+<!-- perspektive2.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telefonbuch - Perspektive 2</title>
+</head>
+<body>
+  <h1>Suche im Telefonbuch</h1>
+  <form id="searchForm" action="search.php" method="GET">
+    <label for="nachname">Nachname:</label>
+    <input type="text" id="nachname" name="nachname">
+    <label for="rufnummer">Rufnummer:</label>
+    <input type="text" id="rufnummer" name="rufnummer">
+    <button type="submit">Suchen</button>
+  </form>
+
+  <div id="searchResults"></div>
+
+  <script src="search.js"></script>
+</body>
+</html>
