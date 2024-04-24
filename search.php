@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "root"; 
-$password = ""; 
-$dbname = "telefonbuch"; 
+$username = "root";
+$password = "";
+$dbname = "telefonbuch";
 
 // Verbindung herstellen
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -13,21 +13,20 @@ if ($conn->connect_error) {
 }
 
 // Suchparameter aus dem Formular sammeln
-$nachname = $_GET['nachname'];
-$rufnummer = $_GET['rufnummer'];
+$nachname = $_GET['last_name'];
+$rufnummer = $_GET['phone_number'];
 
 // SQL-Abfrage zusammenstellen (zum Beispiel)
-$sql = "SELECT * FROM provider_data WHERE nachname LIKE '%$nachname%' AND rufnummer LIKE '%$rufnummer%'";
+$sql = "SELECT * FROM providers WHERE last_name LIKE '%$nachname%' AND phone_number LIKE '%$rufnummer%'";
 $result = $conn->query($sql);
 
 // Ergebnisse ausgeben
 if ($result->num_rows > 0) {
-  while($row = $result->fetch_assoc()) {
-    echo "<p>Rufnummer: " . $row["rufnummer"] . " - Name: " . $row["name"] . "</p>";
+  while ($row = $result->fetch_assoc()) {
+    echo "<p>Rufnummer: " . $row["phone_number"] . " - Name: " . $row["first_name"] . "</p>";
     // Hier weitere Daten nach Bedarf ausgeben
   }
 } else {
   echo "Keine Daten gefunden";
 }
 $conn->close();
-?>
