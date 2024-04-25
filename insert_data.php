@@ -1,14 +1,11 @@
 <?php
-// Verbindung zur Datenbank herstellen
 $servername = "localhost";
-$username = "root"; // Benutzername für die Datenbank
-$password = ""; // Passwort für die Datenbank
-$dbname = "telefonbuch"; // Name der Datenbank
+$username = "root"; 
+$password = ""; 
+$dbname = "telefonbuch"; 
 
-// Verbindung herstellen
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Überprüfen der Verbindung
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
