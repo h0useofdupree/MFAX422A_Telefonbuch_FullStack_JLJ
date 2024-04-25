@@ -21,7 +21,7 @@ $ort = $_POST['ort'];
 $status = $_POST['status'];
 
 // SQL-Abfrage zum Einfügen der Daten
-$sql = "INSERT INTO providers (rufnummer, name, nachname, anschrift, hausnummer, plz, ort, status) 
+$sql = "INSERT INTO provider_data (rufnummer, name, nachname, anschrift, hausnummer, plz, ort, status) 
         VALUES ('$rufnummer', '$name', '$nachname', '$anschrift', '$hausnummer', '$plz', '$ort', '$status')";
 
 if ($conn->query($sql) === TRUE) {
